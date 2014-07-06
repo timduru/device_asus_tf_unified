@@ -146,33 +146,30 @@
     <bool name="config_voice_capable">false</bool>
     <bool name="config_sms_capable">false</bool>
 
-    <bool name="config_hasRemovableLid">true</bool>
+<!--    <bool name="config_hasRemovableLid">true</bool> -->
     <bool name="config_lidControlsSleep">true</bool>
     <integer name="config_lidOpenRotation">0</integer>
     <integer name="config_lidKeyboardAccessibility">1</integer>
 
-    <string name="config_deviceKeyHandlerLib" translatable="false">
-        /system/framework/com.cyanogenmod.asusdec.jar</string>
-    <string name="config_deviceKeyHandlerClass" translatable="false">
-        com.cyanogenmod.asusdec.KeyHandler</string>
-
    <bool name="config_showNavigationBar">true</bool>
    <integer name="config_multiuserMaximumUsers">8</integer>
-
-    <!-- Defines the system property to set for performance profile xe: sys.cpu.modes. Leave it
-         blank if the device do not support performance profiles -->
-    <string name="config_perf_profile_prop" translatable="false">sys.cpu.mode</string>
-
-    <!-- When config_perf_profile_prop is defined, this value MUST be the index of
-         one of the listes values in frameworks/base/core/res/res/values/cm_arrays.xml
-         for "perf_profile_values" array. Leave it blank if the device do not support
-         performance profiles  -->
-    <string name="config_perf_profile_default_entry" translatable="false">1</string>
 
     <!-- Enable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
+
+    <bool name="config_hasDockBattery">true</bool>
+    <bool name="config_hasTouchpad">true</bool>
+
+    <bool name="config_dreamsEnabledByDefault">false</bool>
+    <bool name="config_dreamsActivatedOnDockByDefault">false</bool>
+<!--     <bool name="config_useDevInputEventForAudioJack">true</bool> -->
+    <bool name="config_safe_media_volume_enabled">false</bool>
+
+<!-- enabling WifiDisplay(Miracast Source)-->
+    <bool name="config_enableWifiDisplay">true</bool>
+
 
 </resources>

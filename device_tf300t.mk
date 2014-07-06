@@ -31,7 +31,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
     $(LOCAL_PATH)/idc/elantech_touchscreen.idc:system/usr/idc/elantech_touchscreen.idc \
     $(LOCAL_PATH)/idc/raydium_ts.idc:system/usr/idc/raydium_ts.idc \
-    $(LOCAL_PATH)/idc/panjit_touch.idc:system/usr/idc/panjit_touch.idc
+    $(LOCAL_PATH)/idc/panjit_touch.idc:system/usr/idc/panjit_touch.idc \
+    $(LOCAL_PATH)/keychars/asusec.kcm:system/usr/keychars/Generic.kcm \
+    $(LOCAL_PATH)/keylayout/asusec.kl:system/usr/keylayout/Generic.kl \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
@@ -48,7 +52,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    $(LOCAL_PATH)/asusdec/com.cyanogenmod.asusdec.xml:system/etc/permissions/com.cyanogenmod.asusdec.xml
 
 # Build characteristics setting 
 PRODUCT_CHARACTERISTICS := tablet
@@ -66,12 +69,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     tinymix \
     libaudioutils \
-    AutoParts_tfp \
     blobpack_tfp \
     mischelp \
-    wifimacwriter \
-    com.cyanogenmod.asusdec \
-    libasusdec_jni
+    wifimacwriter
 
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
@@ -108,3 +108,9 @@ PRODUCT_COPY_FILES += \
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
+
+
+# Add commands which are tf101 specific after here
+BOOTANIMATION_RESOLUTION := KatKiss
+$(call inherit-product-if-exists, vendor/eos/common.mk)
+
