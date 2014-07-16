@@ -71,6 +71,7 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     blobpack_tfp \
     mischelp \
+    mkfs.f2fs \
     wifimacwriter
 
 # Propertys spacific for this device
@@ -105,6 +106,9 @@ PRODUCT_COPY_FILES += \
     device/asus/tf300t/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     device/asus/tf300t/gps.conf:system/etc/gps.conf \
     device/asus/tf300t/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/xbin/rsync:system/xbin/rsync
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
