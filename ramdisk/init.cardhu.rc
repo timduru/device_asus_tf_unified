@@ -38,6 +38,7 @@ on early-boot
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpufreq/interactive/go_maxspeed_load 70
+    write /sys/devices/system/cpu/cpu0/cpufreq/gpu_oc 520
 
 on fs
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
@@ -108,6 +109,10 @@ on boot
     chown system system /sys/class/graphics/fb0/device/smartdimmer/enable
     chown system system /sys/class/graphics/fb0/device/smartdimmer/aggressiveness
     chown system system /sys/class/graphics/fb0/device/smartdimmer/phase_in_adjustments
+
+    chown system system /sys/devices/tegradc.0/smartdimmer/enable
+    chown system system /sys/devices/tegradc.0/smartdimmer/aggressiveness
+    chown system system /sys/devices/tegradc.0/smartdimmer/phase_in_adjustments
 
 # smartdimmer parameters
     write /sys/class/graphics/fb0/device/smartdimmer/enable 0
