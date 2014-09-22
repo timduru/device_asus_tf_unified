@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     wifimacwriter
 
+PRODUCT_PACKAGES += \
+   libnetcmdiface
+
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
