@@ -17,6 +17,7 @@
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
 USE_CAMERA_STUB := false
+DEBUG_NO_STDCXX11 := yes
 
 # Camera options
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
@@ -24,7 +25,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 # Cardhu HAL libraries
 BOARD_HAL_STATIC_LIBRARIES := \
     libdumpstate.cardhu \
-    libhealthd.cardhu
+#    libhealthd.cardhu
 
 # inherit from the proprietary version
 -include vendor/asus/tf300t/BoardConfigVendor.mk
@@ -115,9 +116,7 @@ BOARD_SEPOLICY_UNION := \
     file.te \
     rild.te \
     sensors_config.te \
-    shell.te \
     surfaceflinger.te \
-    system.te \
     zygote.te
 
 # CMHW
