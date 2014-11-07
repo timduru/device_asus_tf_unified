@@ -167,9 +167,10 @@
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
+<!--
     <bool name="config_hasDockBattery">true</bool>
     <bool name="config_hasTouchpad">true</bool>
-
+-->
     <bool name="config_dreamsEnabledByDefault">false</bool>
     <bool name="config_dreamsActivatedOnDockByDefault">false</bool>
 <!--     <bool name="config_useDevInputEventForAudioJack">true</bool> -->
