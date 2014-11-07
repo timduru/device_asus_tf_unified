@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     make_ext4fs \
     setup_fs \
+    e2fsck \
     audio.a2dp.default \
     audio.r_submix.default \
     tinymix \
@@ -77,6 +78,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    libnetcmdiface
 
+ PRODUCT_PACKAGES += \
+    libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 # Propertys spacific for this device
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
@@ -84,6 +92,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     tf.enable=y \
     ro.opengles.version=131072 \
     persist.sys.usb.config=mtp,adb
+
+# libhwui flags
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.render_dirty_regions=false
 
 # Tegra 3 spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -96,6 +108,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # media files
 PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     device/asus/tf300t/media_codecs.xml:system/etc/media_codecs.xml \
     device/asus/tf300t/media_profiles.xml:system/etc/media_profiles.xml \
     device/asus/tf300t/audio_policy.conf:system/etc/audio_policy.conf

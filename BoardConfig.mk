@@ -19,6 +19,7 @@ BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
 USE_CAMERA_STUB := false
 DEBUG_NO_STDCXX11 := yes
 
+#BOARD_EGL_NEEDS_LEGACY_FB := true
 # Camera options
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
@@ -52,7 +53,7 @@ ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # Boot/Recovery image settings  
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE :=
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
@@ -105,19 +106,28 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf3
 BOARD_SEPOLICY_DIRS := \
     device/asus/tf300t/sepolicy
 
-BOARD_SEPOLICY_UNION := \
-    file_contexts \
-    genfs_contexts \
-    app.te \
-    bdaddwriter.te \
-    device.te \
-    drmserver.te \
-    init_shell.te \
-    file.te \
-    rild.te \
-    sensors_config.te \
-    surfaceflinger.te \
-    zygote.te
+BOARD_SEPOLICY_UNION += \
+        file_contexts \
+        genfs_contexts \
+        bluetooth.te \
+        device.te \
+        domain.te \
+        drmserver.te \
+        init_shell.te \
+        file.te \
+        gpsd.te \
+        keystore.te \
+        lmkd.te \
+        mediaserver.te \
+        rild.te \
+        sensors_config.te \
+        surfaceflinger.te \
+        system_app.te \
+        system_server.te \
+        ueventd.te \
+        vold.te
+
+MALLOC_IMPL := dlmalloc
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
@@ -132,4 +142,4 @@ RECOVERY_FSTAB_VERSION := 2
 BOARD_RECOVERY_SWIPE := true
 
 
-ARCH_ARM_HIGH_OPTIMIZATION := true
+#ARCH_ARM_HIGH_OPTIMIZATION := true
