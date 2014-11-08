@@ -126,7 +126,8 @@ PRODUCT_COPY_FILES += \
     device/asus/tf300t/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/xbin/rsync:system/xbin/rsync
+    $(LOCAL_PATH)/prebuilt/xbin/rsync:system/xbin/rsync \
+    $(LOCAL_PATH)/prebuilt/xbin/busybox:system/xbin/busybox
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
