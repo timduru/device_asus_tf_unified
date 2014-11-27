@@ -168,7 +168,7 @@
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
 
-    <bool name="config_hasDockBattery">true</bool>
+<!--    <bool name="config_hasDockBattery">true</bool> -->
 <!--
     <bool name="config_hasTouchpad">true</bool>
 -->
@@ -178,7 +178,7 @@
     <bool name="config_safe_media_volume_enabled">false</bool>
 
 <!-- enabling WifiDisplay(Miracast Source)-->
-    <bool name="config_enableWifiDisplay">true</bool>
+<!--    <bool name="config_enableWifiDisplay">true</bool> -->
 
 
     <!-- Enable Google Network Location Services -->
@@ -200,6 +200,5 @@
         <item>bugreport</item>
         <item>users</item>
     </string-array>
-
 
 </resources>
