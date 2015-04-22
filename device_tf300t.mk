@@ -135,5 +135,5 @@ $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
 # Add commands which are tf101 specific after here
 BOOTANIMATION_RESOLUTION := KatKiss
-$(call inherit-product-if-exists, vendor/eos/common.mk)
+$(call inherit-product-if-exists, vendor/kat/common.mk)
 
