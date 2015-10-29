@@ -72,7 +72,6 @@ PRODUCT_PACKAGES += \
     tinymix \
     libaudioutils \
     blobpack_tfp \
-    mischelp \
     mkfs.f2fs \
     wifimacwriter
 
