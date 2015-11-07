@@ -11,7 +11,7 @@
 
 # Vold mount points
 /devices/platform/sdhci-tegra.0/mmc_host* auto  auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/tegra-ehci.2/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
+/devices/platform/tegra-ehci.2/usb* auto auto defaults voldmanaged=usb:auto,encryptable=userdata
 
 # Recovery only mount points
 /dev/block/mmcblk1p1	/external_sd		auto defaults recoveryonly
