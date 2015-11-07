@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+EXTENDED_FONT_FOOTPRINT := true
 
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
@@ -53,7 +54,7 @@ ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # Boot/Recovery image settings  
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
@@ -106,8 +107,6 @@ TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
 # SELinux Defines
 BOARD_SEPOLICY_DIRS := \
     device/asus/tf300t/sepolicy
-
-MALLOC_IMPL := dlmalloc
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
