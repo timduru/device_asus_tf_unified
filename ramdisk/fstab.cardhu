@@ -10,7 +10,7 @@
 /dev/block/mmcblk0p8	/data	ext4	noatime,nosuid,nodev,nomblk_io_submit,errors=panic	wait,encryptable=footer
 
 # Vold mount points
-/devices/platform/sdhci-tegra.0/mmc_host* auto  auto defaults voldmanaged=sdcard1:auto,noemulatedsd
+/devices/platform/sdhci-tegra.0/mmc_host* auto  auto defaults voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/tegra-ehci.2/usb* auto auto defaults voldmanaged=usb:auto,noemulatedsd
 
 # Recovery only mount points
