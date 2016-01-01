@@ -75,6 +75,8 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     wifimacwriter
 
+PRODUCT_PACKAGES +=  libstlport
+
 PRODUCT_PACKAGES += \
    libnetcmdiface
 
@@ -105,6 +107,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.epad.model=TF300T \
     ro.product.model=TF300T
+#misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-swap=false
 
 # media files
 PRODUCT_COPY_FILES += \
