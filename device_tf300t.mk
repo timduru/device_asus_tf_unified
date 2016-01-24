@@ -103,6 +103,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.tegra.nvmmlite=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.external_drive_world_rw=1
+
 # Prime spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.epad.model=TF300T \
