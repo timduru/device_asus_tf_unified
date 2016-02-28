@@ -76,7 +76,9 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
+        <item>30</item>
         <item>50</item>
+        <item>65</item>
         <item>80</item>
         <item>100</item>
         <item>200</item>
@@ -100,7 +102,9 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>25</item>
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
         <item>80</item>
         <item>110</item>
         <item>127</item>
@@ -156,6 +160,10 @@
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
     <integer name="config_screenBrightnessDim">10</integer>
+
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+
 
     <bool name="config_voice_capable">false</bool>
     <bool name="config_sms_capable">false</bool>
