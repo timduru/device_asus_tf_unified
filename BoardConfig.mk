@@ -51,7 +51,6 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 #ARCH_ARM_USE_NON_NEON_MEMCPY := true
 #ARCH_LIBPNG_NO_NEON := true
-NEED_WORKAROUND_CORTEX_A9_745320 := true
 
 # Boot/Recovery image settings  
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
