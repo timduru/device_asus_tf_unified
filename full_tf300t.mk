@@ -18,9 +18,15 @@ $(call inherit-product, device/asus/tf300t/device_tf300t.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-# Configure as xhdpi device to prevent breaking without mdpi drawables
-PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
+# Set the physical display size with PRODUCT_AAPT_CONFIG
+# Options are small(~2"-3"), normal(~3"-4"), large(~4"-7"), xlarge(~7" and larger)
+PRODUCT_AAPT_CONFIG := xlarge
+# Set the preferred asset density with PRODUCT_AAPT_PREF_CONFIG
+# See android CCD for valid options
 PRODUCT_AAPT_PREF_CONFIG := mdpi
+# A list of dpis to select prebuilt apk, in precedence order.
+# See android CCD for valid options
+PRODUCT_AAPT_PREBUILT_DPI := mdpi ldpi tvdpi hdpi xhdpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf300t
