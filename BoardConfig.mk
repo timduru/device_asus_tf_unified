@@ -16,6 +16,7 @@
 EXTENDED_FONT_FOOTPRINT := true
 
 BOARD_USES_GENERIC_AUDIO := false
+# pre kitkat audio legacy policy fix for hotword (ok google) see http://review.cyanogenmod.org/#/c/126869/
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
 USE_CAMERA_STUB := false
 SENSORS_NEED_SETRATE_ON_ENABLE := true
@@ -43,14 +44,10 @@ TARGET_BOARD_PLATFORM := tegra
 
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
-ARCH_ARM_HAVE_TLS_REGISTER := true
-ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
-#ARCH_ARM_USE_NON_NEON_MEMCPY := true
-#ARCH_LIBPNG_NO_NEON := true
+
 
 # Boot/Recovery image settings  
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
@@ -58,15 +55,12 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
 # Video settings
-#BOARD_EGL_CFG := device/asus/tf300t/egl.cfg
-USE_OPENGL_RENDERER := true
 BOARD_HAVE_PIXEL_FORMAT_INFO := true
 #TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # Misc display settings
-BOARD_USE_SKIA_LCDTEXT := true
-BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
+#BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true #TOCHECK if we still need the missing code
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -116,12 +110,8 @@ BOARD_HARDWARE_CLASS := device/asus/tf300t/cmhw/
 
 # Recovery Options
 #BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
-BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_HAS_SDCARD_INTERNAL := true
 TARGET_RECOVERY_FSTAB := device/asus/tf300t/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
-BOARD_RECOVERY_SWIPE := true
 
 
 ARCH_ARM_HIGH_OPTIMIZATION := true
