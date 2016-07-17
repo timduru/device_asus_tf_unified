@@ -46,8 +46,6 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
-ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
-#ARCH_ARM_USE_NON_NEON_MEMCPY := true
 #ARCH_LIBPNG_NO_NEON := true
 
 # Boot/Recovery image settings  
