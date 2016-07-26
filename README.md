@@ -17,4 +17,4 @@ Battery | 5950 mAh
 Display | 10.1" 1280 x 800 px
 Camera  | 8MPx, LED Flash
 
-![ASUS Transformer Pad](https://wiki.cyanogenmod.org/w/File:Tf300t.png "ASUS Transformer Pad")
+![ASUS Transformer Pad](https://wiki.cyanogenmod.org/images/f/f2/Tf300t.png "ASUS Transformer Pad")
