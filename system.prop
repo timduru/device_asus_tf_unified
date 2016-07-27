@@ -2,8 +2,6 @@
 # system.prop for tf300
 #
 ro.carrier=wifi-only
-ro.sf.lcd_density=160
-
 ro.ethernet.interface=eth0
 ro.ethernet.autoEnable=yes
 sensor.loop.minms=0

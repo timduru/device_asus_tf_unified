@@ -14,7 +14,7 @@
 
 $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/asus/tf300t/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
@@ -109,10 +109,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     display.smart_dimmer=1
 
-# Prime spacific overrides
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.epad.model=TF300T \
-    ro.product.model=TF300T
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
@@ -123,9 +119,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
-    device/asus/tf300t/media_codecs.xml:system/etc/media_codecs.xml \
-    device/asus/tf300t/media_profiles.xml:system/etc/media_profiles.xml \
-    device/asus/tf300t/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf
 
 # wifi files
 PRODUCT_COPY_FILES += \
@@ -133,9 +129,9 @@ PRODUCT_COPY_FILES += \
 
 # gps config files
 PRODUCT_COPY_FILES += \
-    device/asus/tf300t/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
-    device/asus/tf300t/gps.conf:system/etc/gps.conf \
-    device/asus/tf300t/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+    $(LOCAL_PATH)/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
+    $(LOCAL_PATH)/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/xbin/rsync:system/xbin/rsync

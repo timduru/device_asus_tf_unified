@@ -30,14 +30,14 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_AAPT_PREBUILT_DPI := mdpi ldpi tvdpi hdpi xhdpi
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_tf300t
-PRODUCT_DEVICE := tf300t
+PRODUCT_NAME := full_tf201
+PRODUCT_DEVICE := tf201
 PRODUCT_BRAND := Asus
-PRODUCT_MODEL := TF300T
+PRODUCT_MODEL := TF201
 
 # Prime spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.epad.model=TF300T \
-    ro.product.model=TF300T \
+    ro.epad.model=TF201 \
+    ro.product.model=TF201 \
     ro.sf.lcd_density=160
 
