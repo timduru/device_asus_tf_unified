@@ -31,8 +31,9 @@ PRODUCT_AAPT_PREBUILT_DPI := hdpi xhdpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf700t
-PRODUCT_DEVICE := tf700t
-PRODUCT_BRAND := Asus
+PRODUCT_DEVICE := TF700T
+PRODUCT_BRAND := asus
+PRODUCT_MANUFACTURER := asus
 PRODUCT_MODEL := TF700T
 
 # Prime spacific overrides
