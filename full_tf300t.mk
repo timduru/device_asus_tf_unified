@@ -24,10 +24,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 PRODUCT_AAPT_CONFIG := xlarge
 # Set the preferred asset density with PRODUCT_AAPT_PREF_CONFIG
 # See android CCD for valid options
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 # See android CCD for valid options
-PRODUCT_AAPT_PREBUILT_DPI := mdpi ldpi tvdpi hdpi xhdpi
+PRODUCT_AAPT_PREBUILT_DPI := mdpi xhdpi hdpi tvdpi ldpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf300t

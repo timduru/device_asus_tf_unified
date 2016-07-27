@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 PRODUCT_AAPT_CONFIG := xlarge
 # Set the preferred asset density with PRODUCT_AAPT_PREF_CONFIG
 # See android CCD for valid options
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 # See android CCD for valid options
 PRODUCT_AAPT_PREBUILT_DPI := hdpi xhdpi
