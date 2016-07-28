@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2013 The Android Open Source Project
- * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2013-2016 The Android Open Source Project
+ * Copyright (C) 2013-2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,10 @@
 #define BATTERY_STATUS_FULL 5
 
 bool
-healthd_board_isDockPresent() {
+healthd_board_isDockPresent()
+{
     int fd = open("/sys/class/power_supply/dock_battery/uevent", O_RDONLY, 0);
+
     if (fd == -1) {
         return false;
     }
@@ -44,7 +46,7 @@ healthd_board_isDockPresent() {
 }
 
 void
-healthd_board_init(struct healthd_config *config)
+healthd_board_init(struct healthd_config* config)
 {
     config->batteryStatusPath            = "/sys/class/power_supply/battery/status";
     config->batteryHealthPath            = "/sys/class/power_supply/battery/health";
@@ -56,11 +58,11 @@ healthd_board_init(struct healthd_config *config)
     //config->batteryCurrentNowPath
     //config->batteryChargeCounterPath
 
- //   config->dockBatterySupported         = true;
-//    config->dockBatteryStatusPath        = "/sys/class/power_supply/dock_battery/status";
+    //   config->dockBatterySupported         = true;
+    //    config->dockBatteryStatusPath        = "/sys/class/power_supply/dock_battery/status";
     //config->dockBatteryHealthPath
     //config->dockBatteryPresentPath
-//    config->dockBatteryCapacityPath      = "/sys/class/power_supply/dock_battery/capacity";
+    //    config->dockBatteryCapacityPath      = "/sys/class/power_supply/dock_battery/capacity";
     //config->dockBatteryVoltagePath
     //config->dockBatteryTemperaturePath
     //config->dockBatteryTechnologyPath
@@ -69,33 +71,34 @@ healthd_board_init(struct healthd_config *config)
 }
 
 int
-healthd_board_battery_update(struct android::BatteryProperties *props)
+healthd_board_battery_update(struct android::BatteryProperties* props)
 {
 
     // Cardhu board doesn't have the present sysfs for dock battery, so we need to
     // fill it from the uevent sysfs. If the uevent sysfs have some data then
     // the dock battery is present. The status will be UNKNOWN
-/*    props->dockBatteryPresent = healthd_board_isDockPresent();
-    if (!props->dockBatteryPresent) {
-        props->dockBatteryStatus = BATTERY_STATUS_UNKNOWN;
-    }
+    /*    props->dockBatteryPresent = healthd_board_isDockPresent();
+        if (!props->dockBatteryPresent) {
+            props->dockBatteryStatus = BATTERY_STATUS_UNKNOWN;
+        }
 
-*/
+    */
     // To follow the AOSP battery contract, the board only should report itself
     // as pluggable when is charging or full charging
     if (props->batteryStatus != BATTERY_STATUS_CHARGING &&
-        props->batteryStatus != BATTERY_STATUS_FULL) {
+            props->batteryStatus != BATTERY_STATUS_FULL) {
 
         props->chargerAcOnline = false;
         props->chargerUsbOnline = false;
         props->chargerWirelessOnline = false;
     }
-/*    if (props->dockBatteryStatus != BATTERY_STATUS_CHARGING &&
-        props->dockBatteryStatus != BATTERY_STATUS_FULL) {
 
-        props->chargerDockAcOnline = false;
-    }
-*/
+    /*    if (props->dockBatteryStatus != BATTERY_STATUS_CHARGING &&
+            props->dockBatteryStatus != BATTERY_STATUS_FULL) {
+
+            props->chargerDockAcOnline = false;
+        }
+    */
     // return 0 to log periodic polled battery status to kernel log
     return 0;
 }
