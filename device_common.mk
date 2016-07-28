@@ -14,6 +14,8 @@
 
 $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
+LOCAL_PATH := device/asus/tf_unified
+
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Files needed for boot image

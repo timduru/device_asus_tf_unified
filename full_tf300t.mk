@@ -15,9 +15,10 @@
 # Inherit from those products. Most specific first.
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(LOCAL_PATH)/device_common.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, device/asus/tf_unified/device_common.mk)
+
 
 # Set the physical display size with PRODUCT_AAPT_CONFIG
 # Options are small(~2"-3"), normal(~3"-4"), large(~4"-7"), xlarge(~7" and larger)
@@ -31,9 +32,11 @@ PRODUCT_AAPT_PREBUILT_DPI := mdpi xhdpi hdpi tvdpi ldpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf300t
+PRODUCT_BRAND := asus
+PRODUCT_MANUFACTURER := asus
 PRODUCT_DEVICE := tf300t
-PRODUCT_BRAND := Asus
 PRODUCT_MODEL := TF300T
+
 
 # Prime spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \

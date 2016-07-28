@@ -31,8 +31,9 @@ PRODUCT_AAPT_PREBUILT_DPI := mdpi xhdpi hdpi tvdpi ldpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf201
+PRODUCT_BRAND := asus
+PRODUCT_MANUFACTURER := asus
 PRODUCT_DEVICE := tf201
-PRODUCT_BRAND := Asus
 PRODUCT_MODEL := TF201
 
 # Prime spacific overrides
