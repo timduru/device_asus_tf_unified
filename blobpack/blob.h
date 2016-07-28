@@ -10,13 +10,11 @@
 #define SEC_MAGIC_SIZE  20
 #define PART_NAME_LEN 4
 
-typedef struct
-{
+typedef struct {
     unsigned char magic[20];
 } secure_header_type;
 
-typedef struct
-{
+typedef struct {
     unsigned char magic[MAGIC_SIZE];
     unsigned int version; // Always 0x00010000
     unsigned int size; // Size of header
@@ -25,8 +23,7 @@ typedef struct
     unsigned int unknown[7]; // Always zero
 } header_type;
 
-typedef struct
-{
+typedef struct {
     char name[PART_NAME_LEN]; // Name of partition. Has to match an existing tegra2 partition name (e.g. LNX, SOS)
     unsigned int offset; // offset in blob where this partition starts
     unsigned int size; // Size of partition
