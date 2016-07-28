@@ -68,8 +68,8 @@ main (int argc, char **argv)
   fwrite (&shdr, sizeof (secure_header_type), 1, outfile);
   fseek ( outfile , 28 , SEEK_SET );
   fwrite (&hdr, sizeof (header_type), 1, outfile);
-  printf ("Size: %d\n", hdr.size);
-  printf ("%d partitions starting at offset 0x%X\n", hdr.num_parts,
+  printf ("Size: %u\n", hdr.size);
+  printf ("%u partitions starting at offset 0x%X\n", hdr.num_parts,
 	  hdr.part_offset);
 
   parts = (part_type *)calloc (hdr.num_parts, sizeof (part_type));
@@ -87,6 +87,8 @@ main (int argc, char **argv)
       if(curfile == NULL)
       {
         fprintf(stderr,"Error opening file %s\n", partitions[i].filename);
+		fclose (outfile)
+		free(parts)
         return 0;
       }
       fseek (curfile, 0, SEEK_END);
@@ -95,7 +97,7 @@ main (int argc, char **argv)
       parts[i].size = fsize;
       currentOffset += fsize;
     }
-
+	
   fwrite (parts, sizeof (part_type), hdr.num_parts, outfile);
   for (i = 0; i < (int)hdr.num_parts; i++)
   {
@@ -105,8 +107,10 @@ main (int argc, char **argv)
     fread (buffer, 1, parts[i].size, currFile);
     fclose(currFile);
     fwrite (buffer, 1, parts[i].size, outfile);
+	free(buffer);
   };
-
+  
+  free(parts)
   fclose (outfile);
   return 0;
 }
