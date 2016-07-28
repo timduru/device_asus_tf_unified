@@ -31,7 +31,7 @@ PRODUCT_AAPT_PREBUILT_DPI := mdpi xhdpi hdpi tvdpi ldpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_tf201
-PRODUCT_DEVICE := TF201
+PRODUCT_DEVICE := tf201
 PRODUCT_MODEL := TF201
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := asus
