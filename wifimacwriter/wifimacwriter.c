@@ -5,7 +5,6 @@
 * To Public License, Version 2, as published by Sam Hocevar. See
 * http://sam.zoy.org/wtfpl/COPYING for more details. */
 //
-
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/mount.h>
@@ -198,7 +197,7 @@ int main(int argc, char* argv[])
         goto exit;
     }
 
-    fscanf(fstream, "%s", project_id);
+    fscanf(fstream, "%15s", project_id);
     fclose(fstream);
 
     SLOGI("Found project id %s", project_id);
