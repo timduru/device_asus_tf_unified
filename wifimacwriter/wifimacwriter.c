@@ -172,10 +172,10 @@ int main(int argc, char *argv[])
 
     switch(atoi(project_id)) {
 
-        case 0:  // TF201
-        case 2:  // TF300T
-        case 3:  // TF300TG
-        case 5:  // TF300TL
+        case 0x00:  // TF201
+        case 0x02:  // TF300T
+        case 0x03:  // TF300TG
+        case 0x05:  // TF300TL
             src = "/system/etc/nvram_nh615.txt";
             err = copy_nvram(src);
             property_set("ro.epad.model_id",project_id);
@@ -183,11 +183,18 @@ int main(int argc, char *argv[])
             property_set("wlan.driver.p2p","0");
             break;
 
-        case 4:  // TF700T
+        case 0x04:  // TF700T
             src = "/system/etc/nvram_nh665.txt";
             err = copy_nvram(src);
             property_set("ro.epad.model_id","04");
             property_set("wifi.module.type","2");
+            break;
+
+        case 0x0b:  // ME301T
+            src = "/system/etc/nvram_murata_4334.txt";
+            err = copy_nvram(src);
+            property_set("ro.epad.model_id","0b");
+            property_set("wifi.module.type","5");
             break;
 
         default:
