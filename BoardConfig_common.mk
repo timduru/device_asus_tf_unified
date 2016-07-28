@@ -49,7 +49,7 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf_unified/bluetooth/vnd.txt
+BOARD_BLUEDROID_VENDOR_CONF := $(LOCAL_PATH)/bluetooth/vnd.txt
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
@@ -79,12 +79,12 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # SELinux Defines
 BOARD_SEPOLICY_DIRS := \
-    device/asus/tf_unified/sepolicy
+    $(LOCAL_PATH)/sepolicy
 
 
 # Recovery Options
 #BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
-TARGET_RECOVERY_FSTAB := device/asus/tf_unified/ramdisk/fstab.cardhu
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
 
 
