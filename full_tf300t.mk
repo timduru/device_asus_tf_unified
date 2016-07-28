@@ -17,7 +17,7 @@
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/asus/tf_unified/device_common.mk)
+$(call inherit-product, device/asus/tf300t/device_common.mk)
 
 
 # Set the physical display size with PRODUCT_AAPT_CONFIG
