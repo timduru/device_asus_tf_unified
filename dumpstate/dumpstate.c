@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 The Android Open Source Project
+ * Copyright (C) 2012-2016 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,19 +18,19 @@
 
 void dumpstate_board()
 {
-	dump_file("board revision",
-		"/sys/devices/platform/cardhu_misc/cardhu_pcbid");
-	dump_file("board gpio status",
-		"/d/gpio");
-	dump_file("soc fuse production mode",
-		"/sys/firmware/fuse/odm_production_mode");
-	dump_file("emmc revision",
-		"/sys/devices/platform/sdhci-tegra.3/mmc_host/mmc0/mmc0:0001/"
-		"prv");
-	dump_file("emmc capacity",
-		"/sys/devices/platform/sdhci-tegra.3/mmc_host/mmc0/mmc0:0001/"
-		"sec_count");
-	dump_file("wlan", "/sys/module/bcmdhd/parameters/info_string");
-	dump_file("touch panel vendor and firmware version",
-		"/sys/class/switch/touch/name");
+    dump_file("board revision",
+              "/sys/devices/platform/cardhu_misc/cardhu_pcbid");
+    dump_file("board gpio status",
+              "/d/gpio");
+    dump_file("soc fuse production mode",
+              "/sys/firmware/fuse/odm_production_mode");
+    dump_file("emmc revision",
+              "/sys/devices/platform/sdhci-tegra.3/mmc_host/mmc0/mmc0:0001/"
+              "prv");
+    dump_file("emmc capacity",
+              "/sys/devices/platform/sdhci-tegra.3/mmc_host/mmc0/mmc0:0001/"
+              "sec_count");
+    dump_file("wlan", "/sys/module/bcmdhd/parameters/info_string");
+    dump_file("touch panel vendor and firmware version",
+              "/sys/class/switch/touch/name");
 };
