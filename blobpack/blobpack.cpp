@@ -87,8 +87,8 @@ main (int argc, char **argv)
       if(curfile == NULL)
       {
         fprintf(stderr,"Error opening file %s\n", partitions[i].filename);
-		fclose (outfile)
-		free(parts)
+		fclose (outfile);
+		free(parts);
         return 0;
       }
       fseek (curfile, 0, SEEK_END);
@@ -110,7 +110,7 @@ main (int argc, char **argv)
 	free(buffer);
   };
   
-  free(parts)
+  free(parts);
   fclose (outfile);
   return 0;
 }
