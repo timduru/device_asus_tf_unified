@@ -74,7 +74,7 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/asus/$(TARGET_DEVICE)
+TARGET_KERNEL_SOURCE := '' #TODO kernel/asus/$(TARGET_DEVICE)
 TARGET_KERNEL_CONFIG := katkernel_defconfig
 
 # Prebuilt Kernel Fallback
