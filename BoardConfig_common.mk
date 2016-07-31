@@ -1,6 +1,5 @@
 # common config for TF201 TF300T TF700T
 
-EXTENDED_FONT_FOOTPRINT := true
 BOARD_USES_GENERIC_AUDIO := false
 # pre kitkat audio legacy policy fix for hotword (ok google) see http://review.cyanogenmod.org/#/c/126869/
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
@@ -102,5 +101,7 @@ CLANG_O3 := true
 STRICT_ALIASING := true
 GRAPHITE_OPTS := true
 ENABLE_GCCONLY := true
+USE_PIPE := true
+ENABLE_SANITIZE := true
 TARGET_GCC_VERSION_EXP := 5.4
 #TARGET_GCC_VERSION_ARM := 5.4
