@@ -14,7 +14,7 @@
 
 $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
-LOCAL_PATH := device/asus/tf300t
+LOCAL_PATH := device/asus/tf700t
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

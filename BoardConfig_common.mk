@@ -46,8 +46,8 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf300t/bluetooth/vnd.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf300t/bluetooth/$(TARGET_DEVICE)
+BOARD_BLUEDROID_VENDOR_CONF := device/asus/tf700t/bluetooth/vnd.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/tf700t/bluetooth/$(TARGET_DEVICE)
 
 
 # Wifi related defines
@@ -78,18 +78,18 @@ TARGET_KERNEL_SOURCE := '' #TODO kernel/asus/$(TARGET_DEVICE)
 TARGET_KERNEL_CONFIG := katkernel_defconfig
 
 # Prebuilt Kernel Fallback
-TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
+TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
 
 # Custom Tools
 #TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf300t_ota_from_target_files
 
 # SELinux Defines
 BOARD_SEPOLICY_DIRS := \
-    device/asus/tf300t/sepolicy
+    device/asus/tf700t/sepolicy
 
 # Recovery Options
 #BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
-TARGET_RECOVERY_FSTAB := device/asus/tf300t/ramdisk/fstab.cardhu
+TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
 
 
