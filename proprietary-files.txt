@@ -39,14 +39,11 @@ etc/nvram_nh660.txt
 etc/nvram_nh665.txt
 etc/nvram_nh669.txt
 
-lib/egl/libEGL_perfhud.so
 lib/egl/libEGL_tegra.so
 lib/egl/libEGL_tegra_impl.so
 lib/egl/libGLES_android.so
-lib/egl/libGLESv1_CM_perfhud.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv1_CM_tegra_impl.so
-lib/egl/libGLESv2_perfhud.so
 lib/egl/libGLESv2_tegra.so
 lib/egl/libGLESv2_tegra_impl.so
 
