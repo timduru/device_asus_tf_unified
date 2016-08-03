@@ -145,8 +145,8 @@ lib/libstagefrighthw.so
 lib/libtbb.so 
 lib/libtinyalsa.so
 
-usr/share/alsa/alsa.conf
 usr/share/alsa/cards/aliases.conf
+
 usr/share/alsa/pcm/center_lfe.conf
 usr/share/alsa/pcm/default.conf
 usr/share/alsa/pcm/dmix.conf
@@ -163,14 +163,19 @@ usr/share/alsa/pcm/surround50.conf
 usr/share/alsa/pcm/surround51.conf
 usr/share/alsa/pcm/surround71.conf
 
+usr/share/alsa/alsa.conf
+
 vendor/firmware/bcm4324/fw_bcmdhd.bin
 vendor/firmware/bcm4324/fw_bcmdhd_apsta.bin
 vendor/firmware/bcm4324/fw_bcmdhd_p2p.bin
+
 vendor/firmware/bcm4329/fw_bcmdhd.bin
 vendor/firmware/bcm4329/fw_bcmdhd_apsta.bin
+
 vendor/firmware/bcm4330/fw_bcmdhd.bin
 vendor/firmware/bcm4330/fw_bcmdhd_apsta.bin
 vendor/firmware/bcm4330/fw_bcmdhd_p2p.bin
+
 vendor/firmware/bcm4334/fw_bcmdhd.bin
 vendor/firmware/bcm4334/fw_bcmdhd_apsta.bin
 vendor/firmware/bcm4334/fw_bcmdhd_p2p.bin
